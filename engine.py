@@ -1,16 +1,13 @@
-import time
 import requests
 import datetime
-import random
 from constants import *
 from secrets import access_token, device
+from time import sleep
 domain = "https://api.particle.io/v1/devices/{0}/{1}"
 
 def main():
   i = 0
-  clear_strip()
   while True:
-    colors = [orange, blue, black, orange, blue]
     if i % 2 == 0:
       illinois_forwards()
     else:
